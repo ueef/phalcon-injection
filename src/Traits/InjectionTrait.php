@@ -6,9 +6,9 @@ namespace Ueef\Phalcon\Injection\Traits {
 
     trait InjectionTrait
     {
-        protected static function inject(string $service)
+        protected function inject(string $service, ...$args)
         {
-            return Di::getDefault()->get($service, array_slice(func_get_args(), 1));
+            return Di::getDefault()->get($service, $args);
         }
     }
 }

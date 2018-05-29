@@ -4,6 +4,6 @@ namespace Ueef\Phalcon\Injection\Interfaces {
 
     interface InjectionInterface
     {
-        public static function inject(string $service);
+        public function inject(string $service);
     }
 }
